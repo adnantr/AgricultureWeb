@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html lang="en">
+@await Component.InvokeAsync("_HeadPartial")
+<body>
+
+	<div class="header">
+		<div class="container">
+			@await Component.InvokeAsync("_TopAddressPartial")
+			@await Component.InvokeAsync("_SocialMediaPartial")
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+
+
+		@await Component.InvokeAsync("_NavbarPartial")
+
+		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4>Kayseri Seker</h4>
+										<img src="~/web/images/banner1.jpg" alt=" " class="img-responsive">
+										<h5>ÜRETİM BAŞARIMIZI GELECEĞE TAŞIYORUZ</h5>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+		@await Component.InvokeAsync("_AboutPartial")
+		@await Component.InvokeAsync("_ServicePartial")
+		@await Component.InvokeAsync("_TeamPartial")
+		@await Component.InvokeAsync("_AnnouncementPartial")
+		@await Component.InvokeAsync("_GalleryPartial")
+<div class="contact-agile" id="contact">
+			<div class="container">
+		@await Component.InvokeAsync("_AddressPartial")
+				<div class="col-md-9 contact-middle">
+					<h2>Say Hello</h2>
+					<form action="#" method="post">
+					<div class="form-agileinfo">
+						<p>Name</p>
+						<input type="text" name="your name" placeholder="Your name" required="" />
+						<p>Email</p>
+						<input type="email" name="your email" placeholder="Your email" required="" />
+					</div>
+					<div class="form-agileits-w3layouts">
+					<p>Comments</p>
+						<textarea  name="your message" placeholder="Your message" required="" ></textarea>
+							<input type="submit"   value="SEND MESSAGE">
+					</div>
+					<div class="clearfix"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	@await Component.InvokeAsync("_MapPartial")
+			<div class="copy">
+				<p>© @DateTime.Now.Year In KayseriSeker . Tüm Hakları Saklıdır </p>
+			</div>
+	@await Html.PartialAsync("/Views/Default/ScriptPartial.cshtml")
+</body>
+</html>

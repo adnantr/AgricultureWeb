@@ -1,0 +1,39 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "AddContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yeni Mesaj Girişi</h1>
+
+<form method="post">
+    <div class="form-group">
+        @Html.Label("Adı Soyadı")
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Mail")
+        <span asp-validation-for="Mail" class="text-danger"></span>
+        <input type="text" asp-for="Mail" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Tarih")
+        <span asp-validation-for="Date" class="text-danger"></span>
+        <input type="date" asp-for="Date" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Mesaj")
+        <span asp-validation-for="Message" class="text-danger"></span>
+        <textarea type="text" asp-for="Message" class="form-control" ></textarea>
+    </div>
+    <br />
+
+    <button class="btn btn-success">Kaydet</button>
+</form>
+
+
+

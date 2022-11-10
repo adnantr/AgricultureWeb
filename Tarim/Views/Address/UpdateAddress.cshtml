@@ -1,0 +1,39 @@
+﻿@model Address
+@{
+    ViewData["Title"] = "UpdateAddress";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Adres Güncelleme</h1>
+
+<form method="post">
+    @Html.HiddenFor(x=>x.AddressId)
+    <div class="form-group">
+        @Html.Label("Açıklama 1")
+        <span asp-validation-for="Description1" class="text-danger"></span>
+        <input type="text" asp-for="Description1" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Açıklama 2")
+        <span asp-validation-for="Description2" class="text-danger"></span>
+        <input type="text" asp-for="Description2" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Açıklama 3")
+        <span asp-validation-for="Description3" class="text-danger"></span>
+        <input type="text" asp-for="Description3" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Açıklama 4")
+        <span asp-validation-for="Description4" class="text-danger"></span>
+        <input type="text" asp-for="Description4" class="form-control" />
+    </div>
+
+    <button class="btn btn-success">Değişiklikleri Kaydet</button>
+</form>
+
+
+

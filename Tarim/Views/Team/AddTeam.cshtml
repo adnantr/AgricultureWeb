@@ -1,0 +1,46 @@
+﻿@model Team
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yeni Persone Girişi</h1>
+
+<form method="post">
+    <div class="form-group">
+        @Html.Label("Adı Soyadı")
+        <span asp-validation-for="PersonName" class="text-danger"></span>
+        <input type="text" asp-for="PersonName" class="form-control" />
+    </div>
+    <div class="form-group">
+        @Html.Label("Görev")
+        <span asp-validation-for="Title" class="text-danger"></span>
+        <input type="text" asp-for="Title" class="form-control" />
+    </div>
+    <div class="form-group">
+        @Html.Label("Görsel")
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+        <input type="file" asp-for="ImageUrl" class="form-control" id="formFile" />
+    </div>
+    <div class="form-group">
+        @Html.Label("Instagram")
+        <span asp-validation-for="InstagramUrl" class="text-danger"></span>
+        <input type="text" asp-for="InstagramUrl" class="form-control" />
+    </div>
+    <div class="form-group">
+        @Html.Label("Instagram")
+        <span asp-validation-for="FacebookUrl" class="text-danger"></span>
+        <input type="text" asp-for="FacebookUrl" class="form-control" />
+    </div>
+    <div class="form-group">
+        @Html.Label("Twitter")
+        <span asp-validation-for="TwitterUrl" class="text-danger"></span>
+        <input type="text" asp-for="TwitterUrl" class="form-control" />
+    </div>
+    <div class="form-group">
+        @Html.Label("Web Sitesi")
+        <span asp-validation-for="WebSiteUrl" class="text-danger"></span>
+        <input type="text" asp-for="WebSiteUrl" class="form-control" />
+    </div>
+    <button class="btn btn-success">Kaydet</button>
+</form>
